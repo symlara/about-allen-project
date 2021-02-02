@@ -5,3 +5,8 @@ html {
 body {
     background-image: url(../images/allen-bg.png);
 }
+
+#form {
+    text-align: center;
+}
+
