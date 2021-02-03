@@ -1,0 +1,55 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../images/allen-bg.png);
+}
+
+#form {
+    text-align: center;
+}
+
+.submitBtn {
+    cursor: pointer;
+}
+
+/* Modal Styles */
+
+.modal {
+    visibility: hidden;
+}
+
+.modal.active {
+    visibility: visible;
+}
+
+
+.modal-content {
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 30%;
+    visibility: hidden;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.modal-content.active {
+    visibility: visible;
+}
+
+
+/* close button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 10px;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
