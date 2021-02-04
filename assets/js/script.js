@@ -13,27 +13,32 @@ $(".close, .modal").on("click", function() {
     $(".modal, .modal-content").removeClass("active");
 });
 
-const data = null;
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		
+fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "d0f3f1eba7msh430ab68207dc835p1cacebjsnab2cb1117987",
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
     }
     
+})
+.then(response => {
+    console.log(response);
     const div = document.createElement("div");
 
-div.classList.add("link");
-const markup = `<h2 class="track_short"`;
+    div.classList.add("link");
+    const markup = `<h2 class="track_short"`;
+    
+    div.innerHTML = markup;
+    track.appendChild(div);
+    });
+  
+    
 
-div.innerHTML = markup;
-track.appendChild(div);
-});
 
-xhr.open("GET", "https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone");
-xhr.setRequestHeader("x-rapidapi-key", "d0f3f1eba7msh430ab68207dc835p1cacebjsnab2cb1117987");
-xhr.setRequestHeader("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com");
 
-xhr.send(data);
+
+
+    
+
+
+
