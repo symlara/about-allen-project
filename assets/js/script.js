@@ -1,5 +1,5 @@
 // variable for fetch call element
-var track = document.querySelector(".container");
+var mainContainer = document.getElementById("deezer");
 
 
 //modal code
@@ -22,20 +22,23 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 })
     .then(response => response.json())
     .then(data => {
-        console.log(data)
-        const div = document.createElement("div");
-
-        div.classList.add("link");
-        const markup = `<h2 class="track_short"`;
-
-        div.innerHTML = markup;
-        track.appendChild(div);
+        console.log(data)      
+        // for loop for objects in json object
+        for (var i = 0; i < data.length; i++) {
+            // append each object to page
+            function appendData(data) {
+            var div = document.createElement("div");
+            div.innerHTML = 'Name: ' + data[i].preview + ' ' + data[i].link;
+            mainContainer.appendChild(div);
+        }
+    }
     })
     .catch(err => {
         console.error(err);
     });
   
-    
+  
+
 
 
 
