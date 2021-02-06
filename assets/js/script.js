@@ -31,7 +31,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 
             var link = document.createElement("a");
             link.textContent = data[i].title;
-            link.href=data[i].preview;
+            link.href = data[i].preview;
             document.getElementById("insert-here");
             musicContainer.appendChild(link);
             
