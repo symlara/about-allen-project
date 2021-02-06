@@ -27,12 +27,18 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         // for loop for objects in json object
         for (var i = 0; i < data.length; i++) {
             // append each object to page
+
+            var link = document.createElement("a");
+            link.textContent = "https://cdns-preview-e.dzcdn.net/stream/c-e67d222c90eb54f65411e18bf19f7a18-5.mp3";
+            link.href="https://cdns-preview-e.dzcdn.net/stream/c-e67d222c90eb54f65411e18bf19f7a18-5.mp3";
+            document.getElementById("insert-here");
+            
             var div = document.createElement("div");
             div.innerHTML =  data[i].title + ' ' + '<br>' + data[i].preview  + ' ' + data[i].link;
             mainContainer.appendChild(div);
-        
     }
     })
+
     .catch(err => {
         console.error(err);
     });
