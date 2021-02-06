@@ -53,3 +53,12 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* deezer api styles */
+
+#deezer {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
