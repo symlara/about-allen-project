@@ -54,10 +54,12 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         var storedData = localStorage.getItem("server");
     }
 
+var submitButton = document.getElementById("submitBtn");
+submitButton.onclick = saveInput;
 
-
-
-    
-
-
+function saveInput() {
+    var input = document.getElementById("input");
+    localStorage.setItem("input", input.value);
+    var storedData = localStorage.getItem("server");
+}
 
