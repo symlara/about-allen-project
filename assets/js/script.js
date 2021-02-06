@@ -1,5 +1,5 @@
 // variable for fetch call element
-var mainContainer = document.getElementById("deezer");
+var mainContainer = document.getElementById("#deezer");
 
 
 //modal code
