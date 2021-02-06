@@ -1,5 +1,5 @@
 // variable for fetch call element
-var mainContainer = document.getElementById("#deezer");
+var mainContainer = document.getElementById("deezer");
 
 
 //modal code
@@ -21,7 +21,8 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     }
 })
     .then(response => response.json())
-    .then(data => {
+    .then(response => {
+        var data = response.data;
         console.log(data)      
         // for loop for objects in json object
         for (var i = 0; i < data.length; i++) {
