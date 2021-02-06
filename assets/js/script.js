@@ -27,11 +27,10 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         // for loop for objects in json object
         for (var i = 0; i < data.length; i++) {
             // append each object to page
-            function appendData(data) {
             var div = document.createElement("div");
             div.innerHTML = 'Name: ' + data[i].preview + ' ' + data[i].link;
             mainContainer.appendChild(div);
-        }
+        
     }
     })
     .catch(err => {
