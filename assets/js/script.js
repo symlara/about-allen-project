@@ -1,5 +1,6 @@
 // variable for fetch call element
 var mainContainer = document.getElementById("deezer");
+var musicContainer = document.getElementById("insert-here");
 
 
 //modal code
@@ -29,13 +30,12 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
             // append each object to page
 
             var link = document.createElement("a");
-            link.textContent = "https://cdns-preview-e.dzcdn.net/stream/c-e67d222c90eb54f65411e18bf19f7a18-5.mp3";
-            link.href="https://cdns-preview-e.dzcdn.net/stream/c-e67d222c90eb54f65411e18bf19f7a18-5.mp3";
+            link.textContent = data[i].title;
+            link.href=data[i].preview;
             document.getElementById("insert-here");
+            musicContainer.appendChild(link);
             
-            var div = document.createElement("div");
-            div.innerHTML =  data[i].title + ' ' + '<br>' + data[i].preview  + ' ' + data[i].link;
-            mainContainer.appendChild(div);
+          
     }
     })
 
