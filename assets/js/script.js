@@ -68,7 +68,11 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
             link.href = feed[i].preview;
             document.getElementById("feed-here");
             feedContainer.appendChild(link);
+<<<<<<< HEAD
         } 
+=======
+        }
+>>>>>>> 76a496009ab9d62b25df953454bedfde7d9dc2e9
     })
 
     .catch(err => {
