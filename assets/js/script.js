@@ -13,6 +13,7 @@ $(".close, .modal").on("click", function() {
     $(".modal, .modal-content").removeClass("active");
 });
 
+// fetch api call for deezer api 
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     "method": "GET",
     "headers": {
@@ -41,9 +42,10 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     .catch(err => {
         console.error(err);
     });
+  // fetch api call for deezer api end
+
   
-  
-   // name field
+   // localStorage call 
    var save_button = document.getElementById('submitBtn');
    save_button.onclick = saveData;
    
