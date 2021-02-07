@@ -2,7 +2,6 @@
 var mainContainer = document.getElementById("deezer");
 var musicContainer = document.getElementById("insert-here");
 
-
 //modal code
 // adds an active class when the Submit button is clicked
 $(".submitBtn").on("click", function() {
@@ -44,23 +43,17 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     });
   
   
+   // name field
+   var save_button = document.getElementById('submitBtn');
+   save_button.onclick = saveData;
    
-// text area localStorage
-var submitButton = document.getElementById("submitBtn");
-submitButton.onclick = saveInput;
+   function saveData() {
+     var input = document.getElementById("name");
+     localStorage.setItem("name", input.value);
+   var storedValue = localStorage.getItem("name");
 
-function saveInput() {
-    var input = document.getElementById("name");
-    localStorage.setItem("value", input.value);
-    var storedData = localStorage.getItem("server");
-}
 
-// text area localStorage
-var submitButton = document.getElementById("submitBtn");
-submitButton.onclick = saveInput;
-
-function saveInput() {
     var input = document.getElementById("input");
     localStorage.setItem("value", input.value);
-    var storedData = localStorage.getItem("server");
-}
+    var storedData = localStorage.getItem("name");
+   }
