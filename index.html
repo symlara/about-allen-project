@@ -8,6 +8,7 @@
     <title>Allen Stone Project</title>
 </head>
 <body>
+  <div class="wrapper">
     <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
         <nav class="f6 fw6 ttu tracked">
           <a class="link dim white dib mr3" href="#" title="Home">Home</a>
@@ -127,13 +128,13 @@
         <!-- comment section -->
         <form id="form">
             <h1 class="f2 lh-copy">Please share any comments you have about this Allen Stone app here:</h1>
-            Name: <input type="text" name="usrname">
+            Name: <input  id="name" type="text" name="usrname">
           </form>
           <br>
           <div style="text-align: center";>
-          <textarea class="text-area" rows="3" cols="50" name="comment" form="form">
+          <textarea class="text-area" rows="3" cols="50" name="comment" form="form" id="input">
           </textarea>
-          <button class="submitBtn">Submit</button>
+          <button class="submitBtn" id="submitBtn">Submit</button>
 
 <!-- The Modal -->
 <div class="modal">
@@ -172,5 +173,6 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    </div>
 </body>
 </html>

@@ -44,13 +44,23 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     });
   
   
+   
+// text area localStorage
+var submitButton = document.getElementById("submitBtn");
+submitButton.onclick = saveInput;
 
+function saveInput() {
+    var input = document.getElementById("name");
+    localStorage.setItem("value", input.value);
+    var storedData = localStorage.getItem("server");
+}
 
+// text area localStorage
+var submitButton = document.getElementById("submitBtn");
+submitButton.onclick = saveInput;
 
-
-
-
-    
-
-
-
+function saveInput() {
+    var input = document.getElementById("input");
+    localStorage.setItem("value", input.value);
+    var storedData = localStorage.getItem("server");
+}
