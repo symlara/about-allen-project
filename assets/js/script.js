@@ -1,6 +1,8 @@
 // variable for fetch call element
 var mainContainer = document.getElementById("deezer");
 var musicContainer = document.getElementById("insert-here");
+var instaContainer = document.getElementById("insta");
+var feedContainer = document.getElementById("feed-here")
 
 
 //modal code
@@ -41,12 +43,33 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 
     .catch(err => {
         console.error(err);
+});
+  
+  
+//Instagram API
+fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "2cea0e1111msh0740a4417e802b2p119ddfjsn058400fb53b2",
+		"x-rapidapi-host": "instagram40.p.rapidapi.com"
+	}
+})
+    .then(response => response.json())
+    .then(response => {
+        var instaData = response.data;
+        console.log(instaData);
+
+        for (var i = 0; i < instaData.length; i++) {
+            var instaLink = document.createElement("b")
+            instaLink.textContent = instaData[i].title;
+            instaLink.href = instaData[i].preview;
+            document.getElementById("feed-here")
+            feedContainer.appendChild(instaLink)
+        }
+    })
+    .catch(err => {
+        console.error(err);
     });
-  
-  
-
-
-
 
 
 
