@@ -73,3 +73,35 @@ body {
 #insert-here a:hover {
     color: lightgray;
 }
+
+
+/* media queries */ 
+
+/* width of 768px and below */
+@media screen and (max-width: 768px) {
+    
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #about {
+        width: 100%;
+    }
+
+    #deezer {
+        width: 100%;
+    }
+
+    #comments {
+        width: 100%;
+    }
+}
+
+/* width of 480px and below */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+    }
+
+}

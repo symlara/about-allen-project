@@ -4,7 +4,6 @@ var musicContainer = document.getElementById("insert-here");
 var instaContainer = document.getElementById("insta");
 var feedContainer = document.getElementById("feed-here")
 
-
 //modal code
 // adds an active class when the Submit button is clicked
 $(".submitBtn").on("click", function() {
@@ -16,6 +15,7 @@ $(".close, .modal").on("click", function() {
     $(".modal, .modal-content").removeClass("active");
 });
 
+//  Deezer API
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     "method": "GET",
     "headers": {
@@ -43,7 +43,10 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 
     .catch(err => {
         console.error(err);
-});
+    });
+    
+    // fetch api call for deezer api end
+
   
   
 //Instagram API
@@ -56,6 +59,7 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
 })
     .then(response => response.json())
     .then(response => {
+<<<<<<< HEAD
         console.log(response);
         var feed = response.data;
         for (var i = 0; i < feed.length; i++) {
@@ -65,6 +69,19 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
             document.getElementById("feed-here");
             feedContainer.appendChild(link);
         } 
+=======
+        var instaData = response.data;
+        console.log(instaData);
+
+        for (var i = 0; i < instaData.length; i++) {
+         
+            var instaLink = document.createElement("a")
+            instaLink.textContent = instaData[i].title;
+            instaLink.href = instaData[i].preview;
+            document.getElementById("feed-here")
+            feedContainer.appendChild(instaLink)
+        }
+>>>>>>> ed741292edeb3704dece204aff85178d1bfae995
     })
 
     .catch(err => {
@@ -77,3 +94,18 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
 
 
 
+  
+   // localStorage call 
+   var save_button = document.getElementById('submitBtn');
+   save_button.onclick = saveData;
+   
+   function saveData() {
+     var input = document.getElementById("name");
+     localStorage.setItem("name", input.value);
+   var storedValue = localStorage.getItem("name");
+
+
+    var input = document.getElementById("input");
+    localStorage.setItem("value", input.value);
+    var storedData = localStorage.getItem("name");
+   }
