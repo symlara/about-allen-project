@@ -15,7 +15,7 @@ $(".close, .modal").on("click", function() {
     $(".modal, .modal-content").removeClass("active");
 });
 
-// fetch api call for deezer api 
+//  Deezer API
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     "method": "GET",
     "headers": {
@@ -63,7 +63,8 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
         console.log(instaData);
 
         for (var i = 0; i < instaData.length; i++) {
-            var instaLink = document.createElement("b")
+         
+            var instaLink = document.createElement("a")
             instaLink.textContent = instaData[i].title;
             instaLink.href = instaData[i].preview;
             document.getElementById("feed-here")
