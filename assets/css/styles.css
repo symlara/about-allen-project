@@ -6,6 +6,8 @@ body {
     background-image: url(../images/allen-bg.png);
 }
 
+
+
 #form {
     text-align: center;
 }
@@ -75,32 +77,86 @@ body {
 }
 
 
+
+
 /* media queries */ 
 
 /* width of 768px and below */
 @media screen and (max-width: 768px) {
     
-    .wrapper {
+    #header nav{
         width: 100%;
-        padding: 20px;
+       display: block;
+       position: absolute;
+    }
+
+    .hero img {
+        width: 100%;
     }
 
     #about {
         width: 100%;
     }
 
+    #about p {
+        font-size: 15px;
+    }
+
     #deezer {
+        width: 100%;
+    }
+
+    #insta {
         width: 100%;
     }
 
     #comments {
         width: 100%;
     }
+
+    #comments h1 {
+        font-size: 25px;
+    }
+
+    #socials {
+        width: 100%;
+    }
 }
 
 /* width of 480px and below */
 @media screen and (max-width: 480px) {
-    .wrapper {
+    
+    #header nav a {
+        font-size: 10px;
+    }
+
+    #image img {
+        width: 100%;
+    }
+
+    #about .pa5-ns {
+        padding: 4rem;
+        width: 100%;
+    }
+    #about p {
+        flex-wrap: wrap;
+        font-size: 15px;
+    }
+
+
+    #deezer {
+        width: 100%;
+    }
+
+    #insta {
+        width: 100%;
+    }
+
+    #comments {
+        width: 100%;
+    }
+
+    #socials {
         width: 100%;
     }
 
