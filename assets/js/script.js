@@ -59,9 +59,9 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
 })
     .then(response => response.json())
     .then(response => {
-<<<<<<< HEAD
         console.log(response);
-        var feed = response.data;
+        var feed = response;
+        console.log(feed)
         for (var i = 0; i < feed.length; i++) {
             var link = document.createElement("a");
             link.textContent = feed[i].title;
@@ -69,19 +69,6 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
             document.getElementById("feed-here");
             feedContainer.appendChild(link);
         } 
-=======
-        var instaData = response.data;
-        console.log(instaData);
-
-        for (var i = 0; i < instaData.length; i++) {
-         
-            var instaLink = document.createElement("a")
-            instaLink.textContent = instaData[i].title;
-            instaLink.href = instaData[i].preview;
-            document.getElementById("feed-here")
-            feedContainer.appendChild(instaLink)
-        }
->>>>>>> ed741292edeb3704dece204aff85178d1bfae995
     })
 
     .catch(err => {
