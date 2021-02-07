@@ -25,7 +25,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 })
     .then(response => response.json())
     .then(response => {
-        var data = response.data;
+        var data = response;
         console.log(data)      
         // for loop for objects in json object
         for (var i = 0; i < data.length; i++) {
@@ -58,21 +58,19 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
 	}
 })
     .then(response => response.json())
-    .then(response => {
+    .then((response) => {
         console.log(response);
         var feed = response;
         console.log(feed)
         for (var i = 0; i < feed.length; i++) {
+            var title = feed[i].node;
+            console.log(title);
             var link = document.createElement("a");
-            link.textContent = feed[i].title;
+            link.textContent = title;
             link.href = feed[i].preview;
             document.getElementById("feed-here");
             feedContainer.appendChild(link);
-<<<<<<< HEAD
-        } 
-=======
         }
->>>>>>> 76a496009ab9d62b25df953454bedfde7d9dc2e9
     })
 
     .catch(err => {
