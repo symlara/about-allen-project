@@ -15,3 +15,4 @@
  * LocalStorage
  * Modals
  
+<img width="1395" alt="header_nav_albums" src="https://user-images.githubusercontent.com/40181569/107162974-6235a780-696c-11eb-88c1-1435f633ef19.png">
