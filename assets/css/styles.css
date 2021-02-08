@@ -6,11 +6,16 @@ body {
     background-image: url(../images/allen-bg.png);
 }
 
+#comments {
+    align-items: center;
+}
+
 #form {
     text-align: center;
 }
 
-.submitBtn {
+#submitBtn {
+    margin: 30px;
     cursor: pointer;
 }
 
@@ -109,6 +114,11 @@ body {
 
     #comments {
         width: 100%;
+        text-align: center;
+    }
+
+    #comment {
+        align-items: center;
     }
 
     #comments h1 {

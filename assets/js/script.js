@@ -4,7 +4,7 @@ var musicContainer = document.getElementById("insert-here");
 
 //modal code
 // adds an active class when the Submit button is clicked
-$(".submitBtn").on("click", function() {
+$("#submitBtn").on("click", function() {
     $(".modal, .modal-content").addClass("active");
 });
 
@@ -85,7 +85,7 @@ for(d in data){
    var storedValue = localStorage.getItem("name");
 
 
-    var input = document.getElementById("input");
-    localStorage.setItem("value", input.value);
+    var input = document.getElementById("comment");
+    localStorage.setItem("comment", input.value);
     var storedData = localStorage.getItem("name");
    }

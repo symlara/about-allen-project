@@ -134,16 +134,24 @@
 
    <!-- comment section -->
     <section id="comments">
-      <form id="form">
-          <h1 class="f2 lh-copy">Please share any comments you have about this Allen Stone app here:</h1>
-          Name: <input id="name" type="text" name="usrname" /> 
+      <form class="pa4 black-80">
+        <div class="measure">
+          <label for="name" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
+          <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
+        </div>
       </form>
       <br />
-      <div style="text-align: center";>
-          <textarea class="text-area" rows="3" cols="50" name="comment" form="form" id="input">
-          </textarea>
-          <button class="submitBtn" id="submitBtn">Submit</button>
-        <!-- The Modal -->
+      <div style="text-align: left";>
+        <form class="pa4 black-80">
+          <div>
+            <label for="comment" class="f6 b db mb2">Comments <span class="normal black-60">(optional)</span></label>
+            <textarea id="comment" name="comment" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" aria-describedby="comment-desc"></textarea>
+          </div>
+        </form>
+        <a class="f6 grow no-underline br-pill ba ph3 pv2 mb2 dib black" id="submitBtn">Submit</a>
+        
+        
+          <!-- The Modal -->
         <div class="modal">
             <!-- Modal content -->
             <div class="modal-content">
