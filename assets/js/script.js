@@ -1,8 +1,7 @@
 // variable for fetch call element
 var mainContainer = document.getElementById("deezer");
 var musicContainer = document.getElementById("insert-here");
-var instaContainer = document.getElementById("insta");
-var feedContainer = document.getElementById("feed-here")
+
 
 //modal code
 // adds an active class when the Submit button is clicked
@@ -43,7 +42,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 
     .catch(err => {
         console.error(err);
-    });
+});
     
     // fetch api call for deezer api end
 
@@ -51,30 +50,22 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
   
 //Instagram API
 fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "2cea0e1111msh0740a4417e802b2p119ddfjsn058400fb53b2",
-		"x-rapidapi-host": "instagram40.p.rapidapi.com"
-	}
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-key": "2cea0e1111msh0740a4417e802b2p119ddfjsn058400fb53b2",
+        "x-rapidapi-host": "instagram40.p.rapidapi.com"
+    }
 })
-    .then(response => response.json())
-    .then((response) => {
-        console.log(response);
-        var feed = response;
-        console.log(feed)
-        for (var i = 0; i < feed.length; i++) {
-            var title = feed[i].node;
-            console.log(title);
-            var link = document.createElement("a");
-            link.textContent = title;
-            link.href = feed[i].preview;
-            document.getElementById("feed-here");
-            feedContainer.appendChild(link);
-<<<<<<< HEAD
-=======
-        } 
->>>>>>> 73549f0fa9408af1c7399ec22c6b69c0732ff53f
-        }
+.then(response => response.json())
+.then(data => {
+var myList = document.getElementById('images');
+for(d in data){
+    let listItem = document.createElement('li');
+    let image = document.createElement('img');
+        image.src = data[d]['node']['thumbnail_src'];
+        listItem.appendChild(image);
+        myList.appendChild(listItem);
+      }
     })
 
     .catch(err => {
