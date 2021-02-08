@@ -1,19 +1,24 @@
-// variable for fetch call element
+// Global Variables
 var musicContainer = document.getElementById("insert-here");
+// End Global Variables
 
 
-//modal code
-// adds an active class when the Submit button is clicked
+// Modal Code
+// Adds An Active Class When The Submit Button Is Clicked
 $("#submitBtn").on("click", function() {
     $(".modal, .modal-content").addClass("active");
 });
 
-// when close button is clicked the modal or "Active class" goes away
+
+
+// When Close Button Is Clicked The Modal Or "Active Class" Goes Away
 $(".close, .modal").on("click", function() {
     $(".modal, .modal-content").removeClass("active");
 });
+// End Modal Code
 
-//  Deezer API
+
+// Deezer API Call
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     "method": "GET",
     "headers": {
@@ -21,30 +26,29 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
     }
 })
-    .then(response => response.json())
-    .then(data => {
-       
-        console.log(data)      
+.then(response => response.json())
+.then(data => {
+    
+    console.log(data)      
 
-        data.data.forEach(element => {
-            var link = document.createElement("a");
-            link.textContent = element.title;
-            link.href = element.preview;
-            console.log("link");
-            musicContainer.appendChild(link);
-        });
-      
-    })
+    data.data.forEach(element => {
+        var link = document.createElement("a");
+        link.textContent = element.title;
+        link.href = element.preview;
+        console.log("link");
+        musicContainer.appendChild(link);
+    });
+    
+})
 
     .catch(err => {
         console.error(err);
 });
-    
-    // fetch api call for deezer api end
+// End Deezer API Call
 
   
   
-//Instagram API
+// Instagram API Call
 fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
     "method": "GET",
     "headers": {
@@ -67,25 +71,21 @@ for(d in data){
     .catch(err => {
         console.error(err);
 });
+// End Instagram API Call
 
-
-
-    
-
-
-
+ 
   
-   // localStorage call 
-   var save_button = document.getElementById('submitBtn');
-   save_button.onclick = saveData;
-   
-   function saveData() {
-     var input = document.getElementById("name");
-     localStorage.setItem("name", input.value);
-   var storedValue = localStorage.getItem("name");
+// localStorage call 
+var save_button = document.getElementById('submitBtn');
+save_button.onclick = saveData;
+function saveData() {
+    var input = document.getElementById("name");
+    localStorage.setItem("name", input.value);
+    var storedValue = localStorage.getItem("name");
 
 
     var input = document.getElementById("comment");
     localStorage.setItem("comment", input.value);
     var storedData = localStorage.getItem("name");
-   }
+}
+// End localStorage call
