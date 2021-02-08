@@ -1,5 +1,4 @@
 // variable for fetch call element
-var mainContainer = document.getElementById("deezer");
 var musicContainer = document.getElementById("insert-here");
 
 
@@ -23,21 +22,18 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
     }
 })
     .then(response => response.json())
-    .then(response => {
-        var data = response;
+    .then(data => {
+       
         console.log(data)      
-        // for loop for objects in json object
-        for (var i = 0; i < data.length; i++) {
-            // append each object to page
 
+        data.data.forEach(element => {
             var link = document.createElement("a");
-            link.textContent = data[i].title;
-            link.href = data[i].preview;
-            document.getElementById("insert-here");
+            link.textContent = element.title;
+            link.href = element.preview;
+            console.log("link");
             musicContainer.appendChild(link);
-            
-          
-    }
+        });
+      
     })
 
     .catch(err => {
