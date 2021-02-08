@@ -56,6 +56,7 @@ fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
         "x-rapidapi-host": "instagram40.p.rapidapi.com"
     }
 })
+<<<<<<< HEAD
 .then(response => response.json())
 .then(data => {
 var myList = document.getElementById('images');
@@ -67,6 +68,24 @@ for(d in data){
         myList.appendChild(listItem);
       }
     })
+=======
+    .then(response => response.json())
+    .then((response) => {
+        console.log(response);
+        var feed = response;
+        console.log(feed)
+        for (var i = 0; i < feed.length; i++) {
+            var title = feed[i].node;
+            console.log(title);
+            var link = document.createElement("a");
+            link.textContent = title;
+            link.href = feed[i].preview;
+            document.getElementById("feed-here");
+            feedContainer.appendChild(link);
+        } 
+        }
+    )
+>>>>>>> e6ca72415ef3e7b249a1105224b2e16ff15c4023
 
     .catch(err => {
         console.error(err);
