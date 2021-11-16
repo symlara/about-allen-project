@@ -1,5 +1,6 @@
 // Global Variables
 var musicContainer = document.getElementById("insert-here");
+var instagramContainer = document.getElementById("images");
 // End Global Variables
 
 
@@ -35,7 +36,6 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         var link = document.createElement("a");
         link.textContent = element.title;
         link.href = element.preview;
-        console.log("link");
         musicContainer.appendChild(link);
     });
     
@@ -48,29 +48,54 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 
   
   
-// Instagram API Call
-fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-key": "2cea0e1111msh0740a4417e802b2p119ddfjsn058400fb53b2",
-        "x-rapidapi-host": "instagram40.p.rapidapi.com"
-    }
-})
-.then(response => response.json())
-.then(data => {
-var myList = document.getElementById('images');
-for(d in data){
-    let listItem = document.createElement('li');
-    let image = document.createElement('img');
-        image.src = data[d]['node']['thumbnail_src'];
-        listItem.appendChild(image);
-        myList.appendChild(listItem);
-      }
-    })
+// // Instagram API Call
+// fetch("https://instagram40.p.rapidapi.com/account-feed?username=hermusicofficial", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "instagram40.p.rapidapi.com",
+// 		"x-rapidapi-key": "d0f3f1eba7msh430ab68207dc835p1cacebjsnab2cb1117987"
+// 	}
+// })
+// .then(response => response.json()) 
+// .then(data => {
+//     console.log(data);
+// var myList = document.getElementById('images');
+// for (d in data) {
+//     let listItem = document.createElement('li');
+//     let image = document.createElement('img');
+//     image.src = data[d]['node']['thumbnail_src'];
+//     listItem.appendChild(image);
+//     myList.appendChild(listItem);
+//     }
+// })
 
-    .catch(err => {
-        console.error(err);
-});
+// .catch(err => {
+//     console.log(err);
+// });
+
+
+// fetch("https://instagram40.p.rapidapi.com/account-feed?username=allenstone", {
+//     "method": "GET",
+//     "headers": {
+//         "x-rapidapi-key": "2cea0e1111msh0740a4417e802b2p119ddfjsn058400fb53b2",
+//         "x-rapidapi-host": "instagram40.p.rapidapi.com"
+//     }
+// })
+// .then(response => response.json())
+// .then(data => {
+// var myList = document.getElementById('images');
+// for(d in data){
+//     let listItem = document.createElement('li');
+//     let image = document.createElement('img');
+//         image.src = data[d]['node']['thumbnail_src'];
+//         listItem.appendChild(image);
+//         myList.appendChild(listItem);
+//       }
+//     })
+
+//     .catch(err => {
+//         console.error(err);
+// });
 // End Instagram API Call
 
  
