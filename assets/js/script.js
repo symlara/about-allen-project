@@ -21,11 +21,11 @@ $(".close, .modal").on("click", function() {
 
 // Deezer API Call
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-key": "d0f3f1eba7msh430ab68207dc835p1cacebjsnab2cb1117987",
-        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-    }
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "d0f3f1eba7msh430ab68207dc835p1cacebjsnab2cb1117987"
+	}
 })
 .then(response => response.json())
 .then(data => {
