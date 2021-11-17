@@ -36,6 +36,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
         var link = document.createElement("a");
         link.textContent = element.title;
         link.href = element.preview;
+        console.log("link");
         musicContainer.appendChild(link);
     });
     
@@ -46,7 +47,6 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=allen%20stone", {
 });
 // End Deezer API Call
 
-  
   
 // // Instagram API Call
 // fetch("https://instagram40.p.rapidapi.com/account-feed?username=hermusicofficial", {
