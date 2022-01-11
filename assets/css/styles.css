@@ -96,13 +96,13 @@ nav {
        padding-bottom: 1px;
        padding-top: 1px;
        padding-left: 1px;
-       padding-right: 3px;
+       padding-right: 2px;
        display: flex;
    }
     
 
     nav a {
-        font-size: 12px;
+        font-size: 9px;
     }
 
     #hero img {
