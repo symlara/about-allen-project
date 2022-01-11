@@ -6,6 +6,14 @@ body {
     background-image: url(../images/allen-bg.png);
 }
 
+nav {
+    width: 100%;
+}
+
+#hero img {
+    width: 100%;
+}
+
 #comments {
     align-items: center;
 }
@@ -81,19 +89,68 @@ body {
 
 /* media queries */ 
 
-/* width of 768px and below */
-@media screen and (max-width: 768px) {
+/* width of 800px and below */
+@media screen and (max-width: 800px) {
     
+   nav {
+       padding-bottom: 1px;
+       padding-top: 1px;
+       padding-left: 1px;
+       padding-right: 3px;
+       display: flex;
+   }
     
-    #header nav{
-        padding-bottom: 20px;
-        width: 100%;
-      position: relative;
-      height: 2px;
+
+    nav a {
+        font-size: 12px;
     }
 
-    .hero img {
+    #hero img {
         width: 100%;
+    }
+
+    #disocography {
+        width: 100%;
+    }
+
+    #last-to-speak li {
+        font-size: 10px;
+    }
+
+    #last-to-speak h1 {
+        font-size: 12px;
+    }
+    
+    #allen-stone-1 li {
+        font-size: 10px;
+    }
+
+    #allen-stone-1 h1 {
+        font-size: 12px;
+    }
+
+    #radius li {
+        font-size: 10px;
+    }
+
+    #radius h1 {
+        font-size: 12px;
+    }
+
+    #building-balance li {
+        font-size: 10px;
+    }
+
+    #building-balance h1 {
+        font-size: 12px;
+    }
+
+    #APART li {
+        font-size: 10px;
+    }
+
+    #APART h1 {
+        font-size: 12px;
     }
 
     #about {
@@ -106,6 +163,12 @@ body {
 
     #deezer {
         width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #deezer a {
+        padding: 15px;
     }
 
     #insta {
@@ -117,7 +180,7 @@ body {
         text-align: center;
     }
 
-    #comment {
+    #comments {
         align-items: center;
     }
 
