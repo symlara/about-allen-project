@@ -34,6 +34,7 @@ body {
     margin: auto;
     padding: 5px;
     border: 1px solid #000000;
+    color: #ffffff;
     border-radius: 10px;
     width: 30%;
     visibility: hidden;
